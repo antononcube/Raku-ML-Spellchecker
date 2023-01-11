@@ -1,0 +1,30 @@
+use v6.d;
+
+use lib '.';
+use lib './lib';
+
+use ML::Spellchecker;
+use ML::Spellchecker::Simple;
+
+use Test;
+
+plan 5;
+
+## 1
+my $word = "krama";
+ok word-candidates($word);
+
+## 2
+ok word-correction($word);
+
+## 3
+my $sentence = "what is the most beutiful butterfli";
+ok word-correction($sentence.words);
+
+## 4
+ok word-candidates(<beutiful buterfly>):p;
+
+## 5
+isa-ok word-candidates(<crise aggain>, :p).all ~~ Pair, True;
+
+done-testing;

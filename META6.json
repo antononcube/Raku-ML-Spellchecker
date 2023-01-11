@@ -1,0 +1,38 @@
+{
+  "name": "ML::Spellchecker",
+  "description": "Raku package for simple and contextual spellchecking.",
+  "version": "0.1.0",
+  "perl": "6.d",
+  "authors": [
+    "Anton Antonov"
+  ],
+  "auth": "zef:antononcube",
+  "depends": [
+    "Algorithm::Soundex",
+    "Lingua::EN::Stem::Porter:ver<1.2+>",
+    "Text::Levenshtein::Damerau:ver<0.3.0+>",
+    "ML::TriesWithFrequencies:ver<0.6.5+>"
+  ],
+  "build-depends": [],
+  "test-depends": [
+  ],
+  "provides": {
+    "ML::Spellchecker": "lib/ML/Spellchecker.rakumod",
+    "ML::Spellchecker::Simple": "lib/ML/Spellchecker/Simple.rakumod"
+  },
+  "resources": [
+    "dictionary-words-English.txt",
+    "big.txt"
+  ],
+  "license": "Artistic-2.0",
+  "tags": [
+    "fuzzy",
+    "matching",
+    "spelling",
+    "spellcheck",
+    "spellchecker",
+    "contextual"
+  ],
+  "api": "1",
+  "source-url": "https://github.com/antononcube/Raku-ML-Spellchecker.git"
+}
